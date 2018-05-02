@@ -1,3 +1,12 @@
+PoC to test how to boot a infrastructure in OpenStack using Terraform and then configure it using Ansible.
+
+All the OpenStack resources are defined within Terraform in [slurm-example/main.tf](slurm-example/main.tf). This includes
+not only the VMs but also the required networks, security groups (firewall rules), ssh keys..etc. This file also uses
+the variables defined in [slurm-example/variables.tf](slurm-example/variables.tf)
+
+Once the infrastructure is up and runnig we use an [Ansible dynamic inventory script](https://github.com/CiscoCloud/k8sclass/blob/master/02-Install/Terraform/terraform.py) to create the ansible inventory
+from the Terraform state file (terraform.tfstate)
+
 # Initial setup
 
 Install Ansible + Terraform + dynamic inventory
