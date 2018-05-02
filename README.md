@@ -57,11 +57,11 @@ terraform apply -auto-approve
 ## Test the dynamic inventory
 
 ```
-ansible -i ~/terraform-ansible-tests/bin/terraform.py -m ping --list-hosts
-ansible -i ~/bin/terraform.py os_metadata_slurm_worker=True -m ping --list-hosts
+ansible -i ~/.terraform-ansible-tests/bin/terraform.py all -m ping --list-hosts
+ansible -i ~/.terraform-ansible-tests/bin/terraform.py os_metadata_slurm_worker=True -m ping --list-hosts
 
 terraform.py --list --pretty --root ~/terraform-ansible-tests/slurm-example/
-terraform.py --hostfile
+terraform.py --hostfile --root ~/terraform-ansible-tests/slurm-example/
 terraform.py --host slurm_master --pretty --root ~/terraform-ansible-tests/slurm-example/
 
 openstack server list
