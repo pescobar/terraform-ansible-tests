@@ -59,6 +59,7 @@ terraform apply -auto-approve
 ```
 ansible -i ~/.terraform-ansible-tests/bin/terraform.py all -m ping --list-hosts
 ansible -i ~/.terraform-ansible-tests/bin/terraform.py os_metadata_slurm_worker=True -m ping --list-hosts
+ansible -i ~/.terraform-ansible-tests/bin/terraform.py os_metadata_slurm_master=True -m ping --list-hosts
 
 terraform.py --list --pretty --root ~/terraform-ansible-tests/slurm-example/
 terraform.py --hostfile --root ~/terraform-ansible-tests/slurm-example/
