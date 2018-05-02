@@ -9,6 +9,8 @@ Install Ansible + Terraform + dynamic inventory by executing [install.sh](instal
 
 ## configuration
 
+Define the [proper environment variables](https://docs.openstack.org/zh_CN/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) to access your OpenStack cloud. 
+
 Edit [slurm-example/variables.tf](slurm-example/variables.tf) with the right values for your setup. You can
 query your `external_gateway` value running `openstack network list --external`
 
@@ -17,7 +19,7 @@ $ openstack network list --external
 +--------------------------------------+--------+----------------------------------------------------------------------------+
 | ID                                   | Name   | Subnets                                                                    |
 +--------------------------------------+--------+----------------------------------------------------------------------------+
-| fd21df30-693b-496a-ac69-8637b9c24cd3 | public | a2d7c467-44f9-43c5-b387-8a6742f45b5c, ee51200c-9b64-4977-ad30-622039d7bba1 |
+| 3cc83f7d-9119-475b-ba17-f3510c7902e8 | public | a2d7c467-44f9-43c5-b387-8a6742f45b5c, ee51200c-9b64-4977-ad30-622039d7bba1 |
 +--------------------------------------+--------+----------------------------------------------------------------------------+
 ```
 

@@ -10,6 +10,7 @@ pip install --upgrade pip
 conda install --yes -c conda-forge ansible
 conda install --yes -c conda-forge terraform
 conda install -y wget
+conda install -c hargup/label/pypi python-openstackclient
 # ansible dynamic inventory to read terraform state files
 curl -o ${INSTALL_DIR}/bin/terraform.py https://raw.githubusercontent.com/CiscoCloud/k8sclass/master/02-Install/Terraform/terraform.py
 chmod +x ${INSTALL_DIR}/bin/terraform.py
