@@ -50,6 +50,7 @@ ssh-keygen -N '' -f ~/.ssh/id_rsa_terraform
 ```
 cd ~/terraform-ansible-tests/slurm-example
 terraform init
+terraform plan
 terraform apply -auto-approve
 ```
 
