@@ -12,6 +12,8 @@ export PATH=~/.terraform-ansible-tests/bin:$PATH
 
 [slurm-example](slurm-example) is modified version of the [official OpenStack example](https://github.com/terraform-providers/terraform-provider-openstack/tree/master/examples/app-with-networking)
 
+The small modifications are in [main.tf starting at line 61](slurm-example/main.tf#L61)
+
 
 ## configuration
 
