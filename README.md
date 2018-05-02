@@ -57,6 +57,8 @@ terraform apply -auto-approve
 ## Test the dynamic inventory
 
 ```
+cd ~/terraform-ansible-tests/slurm-example
+
 ansible -i ~/.terraform-ansible-tests/bin/terraform.py all -m ping --list-hosts
 ansible -i ~/.terraform-ansible-tests/bin/terraform.py os_metadata_slurm_worker=True -m ping --list-hosts
 ansible -i ~/.terraform-ansible-tests/bin/terraform.py os_metadata_slurm_master=True -m ping --list-hosts
@@ -74,6 +76,7 @@ openstack keypair list
 
 ## Stop the VMs and destroy all the resources
 ```
+cd ~/terraform-ansible-tests/slurm-example
 terraform destroy -force
 
 openstack server list
