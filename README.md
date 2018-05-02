@@ -1,6 +1,12 @@
 # Initial setup
 
-Install Ansible + Terraform + dynamic inventory by executing [install.sh](install.sh)
+Install Ansible + Terraform + dynamic inventory
+
+```
+git clone https://github.com/pescobar/terraform-ansible-tests.git ~/terraform-ansible-tests
+bash ~/terraform-ansible-tests/install.sh
+export PATH=~/.terraform-ansible-tests/bin:$PATH
+```
 
 # Slurm PoC
 
@@ -11,7 +17,7 @@ Install Ansible + Terraform + dynamic inventory by executing [install.sh](instal
 
 Define the [proper environment variables](https://docs.openstack.org/zh_CN/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) to access your OpenStack cloud. 
 
-Edit [slurm-example/variables.tf](slurm-example/variables.tf) with the right values for your setup. You can
+Edit [~/terraform-ansible-tests/slurm-example/variables.tf](slurm-example/variables.tf) with the right values for your setup. You can
 query your `external_gateway` value running `openstack network list --external`
 
 ```

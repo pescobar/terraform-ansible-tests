@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALL_DIR="$HOME/terraform-ansible-tests"
+INSTALL_DIR="$HOME/.terraform-ansible-tests"
 
 curl -O https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
 bash Miniconda2-latest-Linux-x86_64.sh -p ${INSTALL_DIR} -b
