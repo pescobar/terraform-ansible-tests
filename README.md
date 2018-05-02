@@ -17,7 +17,7 @@ The small modifications are in [main.tf starting at line 61](slurm-example/main.
 
 ## configuration
 
-Define the [proper environment variables](https://docs.openstack.org/zh_CN/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) to access your OpenStack cloud. 
+Define the [proper environment variables](https://docs.openstack.org/zh_CN/user-guide/common/cli-set-environment-variables-using-openstack-rc.html) to access your OpenStack cloud. You can find and example in [slurm-example/openrc.sample](slurm-example/openrc.sample). 
 
 Edit [~/terraform-ansible-tests/slurm-example/variables.tf](slurm-example/variables.tf) with the right values for your setup. You can
 query your `external_gateway` value running `openstack network list --external`
@@ -30,6 +30,20 @@ $ openstack network list --external
 | 3cc83f7d-9119-475b-ba17-f3510c7902e8 | public | a2d7c467-44f9-43c5-b387-8a6742f45b5c, ee51200c-9b64-4977-ad30-622039d7bba1 |
 +--------------------------------------+--------+----------------------------------------------------------------------------+
 ```
+
+Some other useful commands to fill-up `variables.tf`
+
+```
+openstack image list
+openstack flavor list
+```
+
+Create a ssh key
+
+```
+ssh-keygen -N '' -f ~/.ssh/id_rsa_terraform
+```
+
 
 ## boot the VMs and create all the resources in OpenStack (networks, security groups..etc)
 
